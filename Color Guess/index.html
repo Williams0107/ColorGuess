@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #colorBox {
+             width: 100px;
+            height: 100px;
+          border-radius:50px;
+            margin: 20px auto;
+            /* border: 2px solid black; */
+        }
+        .colorOptions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+            margin-top: 25px;
+        }
+        .colorOption {
+            width: 80px;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            padding: 10px;
+            
+        }
+        .colorOption:hover {
+            transform: scale(1.1);
+        }
+        #gameInstructions, #gameStatus, #score {
+            margin: 10px;
+        }
+        #newGameButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button{
+            border: none;
+            outline: none;
+            color: aqua;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guess the Color!</h1>
+    <div id="gameInstructions" data-testid="gameInstructions">Guess the correct color!</div>
+    <div id="colorBox" data-testid="colorBox"></div>
+    <div class="colorOptions"></div>
+    <!-- <div class="colorOption"></div> -->
+    <div id="gameStatus" data-testid="gameStatus"></div>
+    <div id="score" data-testid="score">Score: 0</div>
+    <button id="newGameButton" data-testid="newGameButton">New Game</button>
+    <script src="script.js"></script>
+</body>
+</html>
+
