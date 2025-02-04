@@ -27,11 +27,13 @@ function checkGuess(selectedColor) {
     if (selectedColor === targetColor) {
         document.getElementById("gameStatus").textContent = "Correct!";
         score++;
+        document.getElementById("score").textContent = "Score: " + score;
+        setTimeout(startGame, 1000); // Automatically start a new round after 1 second
     } else {
         document.getElementById("gameStatus").textContent = "Wrong, try again!";
     }
-    document.getElementById("score").textContent = "Score: " + score;
 }
+
 
 document.getElementById("newGameButton").addEventListener("click", startGame);
 
